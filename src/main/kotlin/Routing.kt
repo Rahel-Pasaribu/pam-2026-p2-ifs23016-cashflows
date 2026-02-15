@@ -11,7 +11,12 @@ fun Application.configureRouting() {
 
     routing {
         get("/") {
-            call.respondText("Hello World!")
+            call.respond(
+                mapOf(
+                    "status" to "success",
+                    "message" to "Service Cash Flows by ifs23016 - Rahel Pasaribu"
+                )
+            )
         }
 
         route("/cash-flows") {
